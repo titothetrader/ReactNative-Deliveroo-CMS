@@ -22,11 +22,12 @@ const FeaturedRow = ({id, title, description, data}) => {
         >
             {/* Restaurant Card */}
             {data?.map(restaurant => {
+                const imageUrl = urlFor(restaurant.image).width(1000).url()
                 return (
                     <RestaurantCard 
                         key={restaurant._id}
                         id={restaurant._id}
-                        imageUrl={urlFor(restaurant.image).width(1000).url()}
+                        imageUrl={imageUrl}
                         title={restaurant.name}
                         rating={restaurant.rating}
                         category={restaurant.category._ref}
