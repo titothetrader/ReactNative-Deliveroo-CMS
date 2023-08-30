@@ -1,17 +1,24 @@
 import { Stack } from 'expo-router/stack'
+import { store } from './store'
+import { Provider } from 'react-redux'
 
 export default function Layout() {
   return (
-    <Stack 
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: '#f4511e',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}
-    ></Stack>
+    // Connect Redux store
+    <Provider store={store}>
+
+      {/*  Wrap Expo Routing */}
+      <Stack 
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      ></Stack>
+    </Provider>
   )
 }
