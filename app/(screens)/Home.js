@@ -34,7 +34,7 @@ export default function HomePage() {
     <SafeAreaView className='bg-gray-100'>    
       {/* Header */}
       <View className='flex-row items-center px-4 pt-5 space-x-2 bg-white pb-7'>
-        <Stack.Screen
+        {/* <Stack.Screen
           options={{
             title: 'Deliveroo',
             headerStyle: { backgroundColor: '#f4511e' },
@@ -45,7 +45,7 @@ export default function HomePage() {
             // headerTitle: props => <Header {...props} />,
             header: props => <Header {...props} />,
           }}
-        />
+        /> */}
         <Image
           // source={imageUrl}
           source={{

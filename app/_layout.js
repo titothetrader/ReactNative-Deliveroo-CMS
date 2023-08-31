@@ -10,6 +10,7 @@ export default function Layout() {
       {/*  Wrap Expo Routing */}
       <Stack 
         screenOptions={{
+          headerShown: false,
           headerStyle: {
             backgroundColor: '#f4511e',
           },
@@ -18,7 +19,8 @@ export default function Layout() {
             fontWeight: 'bold',
           },
         }}
-      ></Stack>
+      >
+      </Stack>
     </Provider>
   )
 }

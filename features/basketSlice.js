@@ -41,4 +41,11 @@ export const selectBasketItemsWithId = (itemsArray, id) => {
   return itemsArray.items.filter(item => item.id == id)
 }
 
+export const selectBasketTotal = (itemsArray) => {
+  return itemsArray.items.reduce((total, item) => {
+    total += Number(item.price)
+    return total
+  }, 0)
+}
+
 export default basketSlice.reducer
