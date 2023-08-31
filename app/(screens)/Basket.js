@@ -32,8 +32,6 @@ const Basket = () => {
         setGroupedItemsInBasket(groupedItems)
     }, [cart])
 
-    console.log(groupedItemsInBasket)
-    
   return (
     <SafeAreaView className='flex-1 bg-white'>
         <View className='flex-1 bg-gray-100'>
@@ -140,7 +138,17 @@ const Basket = () => {
                         />
                 </View>
 
-                <Pressable className='bg-[#00ccbb] rounded-lg w-full p-4'>
+                <Pressable 
+                    className='bg-[#00ccbb] rounded-lg w-full p-4'
+                    onPress={() => {
+                        router.replace({
+                            pathname: '/(screens)/PreparingOrder', 
+                            // params: {
+                            //     cart: JSON.stringify(cart)
+                            // }
+                        })
+                    }}
+                >
                     <Text className='text-lg font-extrabold text-center text-white'>Place Order</Text>
                 </Pressable>
             </View>
