@@ -5,6 +5,7 @@ import { selectRestaurant } from '../../features/restaurantSlice'
 import { XMarkIcon } from 'react-native-heroicons/solid'
 import { router } from 'expo-router'
 import * as Progress from 'react-native-progress'
+import MapView, {Marker} from 'react-native-maps'
 
 const Delivery = () => {
 
@@ -43,6 +44,49 @@ const Delivery = () => {
           </Text>
         </View>
       </SafeAreaView>
+
+      {/* <MapView
+        initialRegion={{
+          latitude: restaurant.lat,
+          longitude: restaurant.long,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005
+        }}
+        className='z-0 flex-1 w-full h-full -mt-0'
+        mapType='mutedStandard'
+      >
+        <Marker 
+          coordinate={{
+            latitude: restaurant.lat,
+            longitude: restaurant.long
+          }}
+          title={restaurant.title}
+          description={restaurant.short_description}
+          identifier='origin'
+          pinColor='#00ccbb'
+        />
+
+      </MapView> */}
+
+      <SafeAreaView className='flex-row items-center space-x-5 bg-white h-28'>
+          <Image 
+            source={{
+              uri: 'https://links.papareact.com/wru'
+            }}
+            className='w-12 h-12 p-4 ml-5 bg-gray-300 rounded-full'
+          />
+          <View className='flex-1'>
+            <Text className='text-lg'>
+              Your Name
+            </Text>
+            <Text className='text-gray-400'>
+              Your Rider
+            </Text>
+          </View>
+
+          <Text className='text-[#00ccbb] text-lg mr-5 font-bold'>Call</Text>
+      </SafeAreaView>
+
     </View>
   )
 }
